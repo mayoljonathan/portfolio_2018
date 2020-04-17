@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  url: string = 'https://mayoljonathan.github.io'
-
+  url: string = window.location.origin;
   constructor() { }
 
   ngOnInit() {

@@ -7,7 +7,7 @@
       
       <div class="technology">
         <div *ngFor="let tech of skill.tech" class="technology-container">
-          <img [src]="'../assets/logos/'+ tech.toLowerCase() + '.png'" [alt]="tech" class="technology-logo">
+          <img [src]="'./assets/logos/'+ tech.toLowerCase() + '.png'" [alt]="tech" class="technology-logo">
           <span class="technology-name"> {{ tech }} </span>
         </div>
       </div>

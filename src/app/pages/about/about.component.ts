@@ -27,7 +27,7 @@ export class AboutComponent implements OnInit {
     this.aboutContent = `
       <p>Hello, I'm Jonathan Jay Mayol. I'm a fresh graduate with a Bachelor's degree in Information Technology in ACLC College of Mandaue and currently looking for a Web Developer job in IT industry where I can utilize my skills and enhance it as well.
       I love to code because it is my passion and I can make my ideas turn to reality with the help of technology and it is possible because I am willing to learn new things and find ways to solve problems.
-      <a href="/assets/files/resume(Mayol).pdf" target="_blank" rel="noopener" class="underline">Download my resume</a>.
+      <a href="./assets/files/resume(Mayol).pdf" target="_blank" rel="noreferrer noopener" class="underline">Download my resume</a>.
       </p>
       
       <p>You can reach out by my email - <a class="underline" href="mailto:mayoljonathan@gmail.com">mayoljonathan@gmail.com</a></p>
@@ -36,9 +36,9 @@ export class AboutComponent implements OnInit {
 
   setHeroBackgroundImage() {
     if (this.helperService.isWebpSupported) {
-      return this.aboutHeroBackground.nativeElement.style.backgroundImage = `url('/assets/images/about/about.webp')`;
+      return this.aboutHeroBackground.nativeElement.style.backgroundImage = `url('./assets/images/about/about.webp')`;
     }
-    this.aboutHeroBackground.nativeElement.style.backgroundImage = `url('/assets/images/about/about.jpg')`;
+    this.aboutHeroBackground.nativeElement.style.backgroundImage = `url('./assets/images/about/about.jpg')`;
   }
 
   resizeHero():void {

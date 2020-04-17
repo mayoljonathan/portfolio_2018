@@ -1,0 +1,25 @@
+<div [@pageTransition]>
+    <section #aboutHeroContainer class="about-hero-container">
+        <div #aboutHeroBackground class="about-hero-background"></div>
+        <div class="about-hero-content">
+            <div>
+                <span class="about">ABOUT</span>
+                <span class="about-name">Jonathan Jay Mayol</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- For different sections -->
+    <!-- <section class="about-content-container"> 
+        <div class="about-content-type-container">
+            <div class="content-type"> About Me</div>
+            <div class="content"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+        </div>
+    </section> -->
+
+    <section class="about-content-container"> 
+        <p class="about-content" [innerHTML]="aboutContent"></p>
+    </section>
+</div>
+
+<my-footer [noContainer]="true"></my-footer>

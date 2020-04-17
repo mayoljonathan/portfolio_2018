@@ -1,0 +1,46 @@
+<div [@pageTransition]>
+    <hero contentType="greetings"></hero>
+
+    <div class="projects-container">
+        <div *ngFor="let project of projects;" class="col-6 project" (click)="viewProject(project.id)">
+            <picture class="project-image">
+                <source [srcset]="project.images.hero.high_webp" type="image/webp">
+                <img [src]="project.images.hero.high_jpg" [alt]="project.title" class="project-image">
+            </picture>
+
+            <!-- <img *ngIf="dataService.isWebpSupported" class="project-image" [id]="'project-image-'+project.id"
+                (load)="helperService.onLoadImage('project-image-'+project.id)"
+                [defaultImage]="project.images.hero.tiny_webp" 
+                [lazyLoad]="project.images.hero.high_webp"
+                [alt]="project.title">
+
+            <img *ngIf="!dataService.isWebpSupported" class="project-image" [id]="'project-image-'+project.id"
+                (load)="helperService.onLoadImage('project-image-'+project.id)"
+                [defaultImage]="project.images.hero.tiny_jpg" 
+                [lazyLoad]="project.images.hero.high_jpg"
+                [alt]="project.title"> -->
+                
+            <!-- <picture>
+                <source class="project-image" type="image/webp"
+                        [srcset]="project.images.hero.tiny_webp" 
+                        [lazyLoad]="project.images.hero.high_webp">
+
+                <img class="project-image"
+                    [defaultImage]="project.images.hero.tiny_jpg" 
+                    [lazyLoad]="project.images.hero.high_jpg"
+                    [alt]="project.title">
+                    https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fm=jpg
+            </picture> -->
+
+            <div class="overlay">
+                <div class="text"> {{ project.title }}</div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <button (click)="viewMoreProjects()">VIEW MORE</button>
+        </div>
+        <my-footer></my-footer>
+    </div>
+</div>
+

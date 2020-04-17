@@ -1,0 +1,29 @@
+<div [@pageTransition]>
+	<hero contentType="project-list"></hero>
+	
+	<main>
+		<div *ngFor="let project of projects;let odd=odd" class="project-container" [ngClass]="odd ? 'row-reverse' : ''">
+			<div class="col-8 project-side-image" [ngClass]="!odd ? 'project-image-left' : 'project-image-right'">
+				<picture class="project-image" (click)="viewProject(project.id)">
+					<source [srcset]="project.images.hero.high_webp" type="image/webp">
+					<img [src]="project.images.hero.high_jpg" [alt]="project.title" class="project-image">
+				</picture>
+				<!-- <img class="project-image"
+					[src]="project.image." 
+					[alt]="project.title"> -->
+			</div>
+			<div class="col-4 project-side-content">
+				<div>
+					<p class="project-title underline" (click)="viewProject(project.id)">{{ project.title }}</p>
+					<div class="project-description"> {{ project.description}} </div>
+
+					<div class="wrapper">
+						<button (click)="viewProject(project.id)">SEE MORE</button>
+						<button *ngIf="project.siteURL" (click)="viewDemo(project.siteURL)">VIEW DEMO</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+<my-footer [noContainer]="true"></my-footer>

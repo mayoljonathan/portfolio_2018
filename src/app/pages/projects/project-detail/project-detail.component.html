@@ -1,0 +1,57 @@
+<div [@pageTransition]>
+	<section *ngIf="!project">
+		That project doesn't exist :o
+	</section>
+
+	<main>
+		<section *ngIf="project" #projectHeroContainer class="project-hero-container">
+			<div #projectHeroBackground class="project-hero-background" [ngStyle]="{'background-image': setProjectHeroBackground()}"></div>
+			<div class="project-hero-content">
+				<div>
+					<div class="project-title"> {{ project.title }}</div>
+					<span class="project-description"> {{ project.description }}</span>
+	
+					<div class="wrapper">
+						<button *ngIf="project.appDownloadURL" (click)="navigateToURL(project.appDownloadURL)">DOWNLOAD APP</button>
+						<button *ngIf="project.siteURL" (click)="navigateToURL(project.siteURL)">VIEW DEMO</button>
+						<button *ngIf="project.githubURL" (click)="navigateToURL(project.githubURL)">VIEW CODE ON GITHUB</button>
+					</div>
+				</div>
+	
+				<!-- VIEWED ONLY WHEN MOBILE -->
+				<picture *ngIf="showProjectHeroImage">
+					<source [srcset]="project.images.hero.high_webp" type="image/webp">
+					<img [src]="project.images.hero.high_jpg" [alt]="project.title" class="project-hero-image">
+				</picture>
+			</div>
+		</section>
+
+		<section class="project-development-details">
+			<div class="text-center">
+				<div>Type</div>
+				<span>{{ project.type }}</span>
+			</div>
+			<div class="text-center">
+				<div>Team</div>
+				<span>{{ project.team }}</span>
+			</div>
+			<div class="text-center">
+				<div>Technologies</div>
+				<div *ngFor="let tech of project.technologies" class="project-technologies-container">
+					<img [src]="'../assets/logos/'+ tech.toLowerCase() + '.png'" [alt]="tech" class="project-technology" [title]="tech">
+				</div>
+			</div>
+			<div class="text-center">
+				<div>Platform</div>
+				<span>{{ project.platforms }}</span>
+			</div>
+		</section>
+
+		<section *ngIf="project.reasonToCreate">
+			<h3>Why we created {{ project.title }}?</h3>
+			<p class="project-reason">{{ project.reasonToCreate }}</p>
+		</section>
+    </main>
+
+	<my-footer [noContainer]="true"></my-footer>
+</div>

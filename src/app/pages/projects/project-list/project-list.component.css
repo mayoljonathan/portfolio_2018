@@ -1,0 +1,33 @@
+.project-container {
+    display: flex;
+    margin-bottom: 64px;
+}
+.project-image { 
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+.project-side-image {
+    margin: auto;
+}
+.project-image-left {
+    margin-right: 96px;
+}
+.project-image-right {
+    margin-left: 96px;
+}
+.project-side-content {
+    display: flex;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+.project-description {
+    letter-spacing: .01em;
+    line-height: 1.5em;
+    font-size: 18px;
+}
+

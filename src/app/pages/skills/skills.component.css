@@ -1,0 +1,57 @@
+.skills-container {
+    /* width: fit-content; */
+    /* display: block; */
+    margin: auto;
+    display: table;
+}
+
+.skillSet-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.skillset {
+    font-size: 24px;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.technology {
+    /* width: 100%; */
+    /* display: inline-block; */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.technology-container {
+    float:left; 
+    display: grid;
+    
+    /* FOR EDGE 14 */
+    display: -ms-grid;
+    grid-template-columns: 100%;
+}
+    /* SPECIFICALLY FOR EDGE */
+@supports (-ms-ime-align:auto){
+    .technology-container {
+        margin-bottom: 12px;
+    }
+}
+
+.technology-logo {
+    width: 64px;
+    min-width: 64px;
+    max-width: 64px;
+    margin: 12px;
+}
+.technology-name {
+    text-align: center;
+
+    /* FOR EDGE 14 */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 120%;
+}

@@ -1,0 +1,19 @@
+<div [@pageTransition]>
+  <hero contentType="skills"></hero>
+
+  <div class="skills-container">
+    <div *ngFor="let skill of skillSet" class="skillSet-container">
+      <div class="skillset">{{ skill.type }}</div>
+      
+      <div class="technology">
+        <div *ngFor="let tech of skill.tech" class="technology-container">
+          <img [src]="'../assets/logos/'+ tech.toLowerCase() + '.png'" [alt]="tech" class="technology-logo">
+          <span class="technology-name"> {{ tech }} </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<my-footer [noContainer]="true"></my-footer>

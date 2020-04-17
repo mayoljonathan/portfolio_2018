@@ -1,0 +1,24 @@
+<ul #navMenu class="nav-menu">
+  <li><a href="#" class="underline" routerLink="/">Projects</a></li>
+  <li><a href="#" class="underline" routerLink="/skills">Skills</a></li>
+  <li><a href="#" class="underline" routerLink="/about">About</a></li>
+  <!-- <li class="push-right"><a href="#">Jonathan</a></li> -->
+  
+  <!-- SHOWN WHEN WIDTH IS SMALL -->
+  <div #iconMenuContainer class="icon-menu-container" (click)="toggleMenu()">
+      <div #iconMenu id="icon-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </div>
+
+  <!-- OVERLAY WHEN ICON MENU IS OPEN-->
+  <div id="menu-overlay" *ngIf="showMenuInOverlay" [@menuOverlayState]>
+      <ul class="nav-menu-vertical">
+          <li><a href="#" class="underline" routerLink="/" (click)="toggleMenu()">Projects</a></li>
+          <li><a href="#" class="underline" routerLink="/skills" (click)="toggleMenu()">Skills</a></li>
+          <li><a href="#" class="underline" routerLink="/about" (click)="toggleMenu()">About</a></li>
+      </ul>
+  </div>
+</ul>

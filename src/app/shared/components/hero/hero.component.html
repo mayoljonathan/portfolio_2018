@@ -1,0 +1,28 @@
+<section class="hero" [ngClass]="getHeroSectionClass()" [ngSwitch]="contentType">
+    <div *ngSwitchCase="'greetings'">
+        Hi! I am <a class='underline my-name' routerLink="/about">Jonathan</a>. I'm a Web and Mobile Application Developer based in Mandaue City, Cebu.
+    </div>
+
+    <div *ngSwitchCase="'skills'">
+        Skills
+        <p class="sub-hero-content">These are the technologies that I learned throughout college days. I use web technologies for mobile application development.</p>
+    </div>
+
+    <div *ngSwitchCase="'project-list'">
+        Other Projects
+        <p class="sub-hero-content">These are the other projects I made. I utilized and improved my understanding in creating these apps and systems.</p>
+    </div>
+
+    <!-- <div > -->
+        <!-- <section #projectHeroContainer class="hero-full" *ngSwitchCase="'project-detail'">
+            <div #projectHeroBackground class="project-hero-background">
+                <div class="project-hero-content">
+                    <div class="grid">
+                        <p class="project-title"> {{ project.title }}</p>
+                        <span class="project-description"> {{ project.description }}</span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    <!-- </div> -->
+</section>

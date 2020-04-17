@@ -1,0 +1,81 @@
+main {
+    margin-bottom: 48px;
+}
+.project-hero-container {
+    height: 400px;
+}
+.project-hero-background {
+    /* background: url('/assets/images/about/about1.png'), linear-gradient(to right, #010002 0%, #231e25 50%, #6f5c61 75%, #836867 100%); */
+
+    height: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    background-position: right 24px center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    pointer-events: none;
+}
+.project-hero-content {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 400px;
+    max-width: 40%;
+}
+.project-title {
+    margin: 24px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.project-description,
+.project-reason,
+.project-development-details div span {
+    letter-spacing: .01em;
+    line-height: 1.5em;
+    font-size: 18px;
+}
+
+/* VIEWED ONLY IN MOBILE SCREEN  */
+figure {
+    width: 100%;
+    margin: auto;
+}
+.project-hero-image{
+    height: auto;
+    width: 100%;
+}
+/* END */
+
+.project-development-details{
+    margin: 48px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-development-details > div {
+    font-size: 16px;
+    flex-basis: 20%;
+    flex-grow: 1;
+    margin: 12px;
+}
+.project-development-details div div{
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.project-technologies-container{
+    display: inline;
+}
+.project-technologies-container .project-technology{
+    width: 32px;
+}
+
+
+
+/* @media only screen and (max-width : 1380px) {
+    .project-hero-content {
+        max-width: 30%;
+    }
+} */

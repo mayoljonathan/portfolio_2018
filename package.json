@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --base-href ./ --output-path docs --prod --build-optimizer",
+    "build": "ng build --base-href https://mayoljonathan.com --output-path docs --prod --build-optimizer",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
